@@ -1,0 +1,12 @@
+FROM nginx:latest
+
+copy . /tmp
+#copy /tmp/new.txt /tmp
+
+RUN echo "hello" >> /tmp/file.txt
+
+RUN apt-get update
+RUN apt-get install vim -y
+
+EXPOSE 80
+
